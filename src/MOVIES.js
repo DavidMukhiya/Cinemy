@@ -1,9 +1,9 @@
 import avenger from './img/movies/avenger.jpg'
-import batman from './img/movies/batman.webp'
+import batman from './img/movies/batman.jpg'
 import godfather from './img/movies/godfather.jpg'
 import jurassicpark from './img/movies/jurassic-park.jpg'
 import spiderman from './img/movies/spiderman.jpg'
-import titanic from './img/movies/avenger.jpg'
+import titanic from './img/movies/titanic.jpg'
 
 
 export const MOVIES = [

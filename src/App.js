@@ -1,10 +1,11 @@
 import './App.css';
-import MovieCard from './components/MovieCard';
+import MovieCardList from './components/MovieCardList';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return ( 
       <>
-        <MovieCard/>
+        <MovieCardList/>
       </>
    );
 }
