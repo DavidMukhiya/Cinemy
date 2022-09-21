@@ -12,6 +12,7 @@ export const MOVIES = [
         name: 'Avenger',
         image: avenger,
         description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
+        // isMovie: true;
     },
     {
         id: 1,

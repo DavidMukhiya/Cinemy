@@ -1,4 +1,4 @@
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import { useState } from "react";
 import MovieDetail from "./MovieDetail";
 import MovieCardList from "./MovieCardList";

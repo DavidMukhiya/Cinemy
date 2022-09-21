@@ -1,6 +1,6 @@
 import React from "react";
 //import { Navbar } from "./Navbar";
-import { Navbar, NavbarBrand, Collapse, NavbarToggler, Nav, NavItem  } from "reactstrap";
+import { Navbar, NavbarBrand, Nav, NavItem  } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import cinemylogo from '../img/cinemy-logo.jpg'
 
@@ -28,7 +28,7 @@ const Header = () => {
         </NavItem>
         <NavItem>
             <NavLink className='nav-link' to='/admin'>
-              admin
+              Admin
             </NavLink>
         </NavItem>
       </Nav>
