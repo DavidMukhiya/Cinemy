@@ -7,18 +7,21 @@ import { Navbar } from "./components/Navbar";
 import { NavLink } from "reactstrap";
 import Movie from "./pages/Movie";
 import MovieDirectoryPage from "./components/MovieDirectoryPage";
+import Tvseries from "./pages/TVseries";
+import MovieCardList from "./components/MovieCardList";
 
 function App() {
   return (
     <>
       <Header />
-      <Body />
-      <MovieDirectoryPage/>
-      {/* <div>
+      {/* <Body />
+      <MovieDirectoryPage/> */}
         <Routes>
-          <Route path="/" element={<Movie />}></Route>
+          <Route path="/" element={<Body />}></Route>
+          <Route path="/movies" element={<MovieCardList/>}></Route>
+          <Route path="/tvseries" element={<Tvseries/>} ></Route>
         </Routes>
-      </div> */}
+      
     </>
   );
 }
