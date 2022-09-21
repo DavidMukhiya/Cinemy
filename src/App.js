@@ -9,6 +9,8 @@ import Movie from "./pages/Movie";
 import MovieDirectoryPage from "./components/MovieDirectoryPage";
 import Tvseries from "./pages/TVseries";
 import MovieCardList from "./components/MovieCardList";
+import Footer from "./components/Footer";
+import Admin from "./components/Admin";
 
 function App() {
   return (
@@ -20,7 +22,9 @@ function App() {
           <Route path="/" element={<Body />}></Route>
           <Route path="/movies" element={<MovieCardList/>}></Route>
           <Route path="/tvseries" element={<Tvseries/>} ></Route>
+          <Route path="/admin" element={<Admin/>}></Route>
         </Routes>
+        <Footer/>
       
     </>
   );
