@@ -3,10 +3,10 @@ import Header from "./components/Header";
 import Body from "./components/Body";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Routes, Route } from "react-router-dom";
-import Tvseries from "./pages/TVseries";
 import MovieCardList from "./components/MovieCardList";
 import Footer from "./components/Footer";
 import Admin from "./components/Admin";
+import Tvseries from "./components/Tvseries";
 
 function App() {
   return (
