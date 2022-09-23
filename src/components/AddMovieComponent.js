@@ -11,25 +11,35 @@ const AddMovieComponent = () => {
   const navigate = useNavigate();
   const { movieId } = useParams();
 
-  const saveMovie = (e) => {
+  const saveorUpdateMovie = (e) => {
     e.preventDefault();
 
     const movie = { id, name, image, description, isMovie };
 
     console.log(movie);
 
-    MovieService.addMovie(movie)
-      .then((response) => {
-        console.log(response.data);
-        navigate("/movies");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (movieId) {
+      MovieService.updateMovie(movieId, movie)
+        .then((response) => {
+          navigate("/movies")
+        })
+        .catch((error) => {
+          console.log(error)
+        });
+    } else {
+      MovieService.addMovie(movie)
+        .then((response) => {
+          console.log(response.data);
+          navigate("/movies");
+        })
+        .catch((error) => {
+          console.log(error)
+        })
+    }
   };
 
   useEffect(() => {
-    MovieService.getEmployeByID(movieId)
+    MovieService.getMovieByID(movieId)
       .then((response) => {
         setId(response.data.id);
         setName(response.data.name);
@@ -132,9 +142,9 @@ const AddMovieComponent = () => {
                 {/* IsMovie? */}
                 <button
                   className="btn btn-success"
-                  onClick={(e) => saveMovie(e)}
+                  onClick={(e) => saveorUpdateMovie(e)}
                 >
-                  Add Movie
+                  Submit
                 </button>
               </form>
             </div>
