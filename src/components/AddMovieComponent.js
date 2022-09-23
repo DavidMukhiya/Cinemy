@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MovieService from "../services/MovieService";
 
 const AddMovieComponent = () => {
@@ -113,6 +113,7 @@ const AddMovieComponent = () => {
                 >
                   Add Movie
                 </button>
+                <Link to='/' className="btn btn-danger m-2">Cancel</Link>
               </form>
             </div>
           </div>
