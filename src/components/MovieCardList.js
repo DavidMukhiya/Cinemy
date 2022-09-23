@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Row, Col } from "reactstrap";
+import { Row, Col, Button } from "reactstrap";
 import { MOVIES } from "../MOVIES";
 import MovieService from "../services/MovieService";
 import SimpleCard from "./SimpleCard";
@@ -9,6 +9,10 @@ const MovieCardList = ({ setMovieId }) => {
   const [MOVIES, setMOVIES] = useState([]);
 
   useEffect(() => {
+    getAllMovies();
+  }, []);
+
+  const getAllMovies = () => {
     MovieService.getAllMovies()
       .then((response) => {
         setMOVIES(response.data);
@@ -17,7 +21,25 @@ const MovieCardList = ({ setMovieId }) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  };
+
+  const deleteMovie = (movieId) => {
+    console.log(movieId);
+    MovieService.deleteMovie(movieId)
+      .then((response) => {
+        MovieService.getAllMovies()
+          .then((response) => {
+            setMOVIES(response.data);
+            console.log(response.data);
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -36,6 +58,12 @@ const MovieCardList = ({ setMovieId }) => {
               <Link className="btn btn-info" to={`/editMovie/${movie.id}`}>
                 Update
               </Link>
+              <Button
+                className="btn btn-danger m-2"
+                onClick={() => deleteMovie(movie.id)}
+              >
+                Delete
+              </Button>
             </Col>
           );
         })}

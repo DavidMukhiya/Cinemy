@@ -15,8 +15,12 @@ class MovieService {
     return axios.get(MOVIE_BASE_API_URL + "/" + movieId);
   }
 
-  updateMovie(movieId, movie){
-    return axios.put(MOVIE_BASE_API_URL + '/'+movieId, movie)
+  updateMovie(movieId, movie) {
+    return axios.put(MOVIE_BASE_API_URL + "/" + movieId, movie);
+  }
+
+  deleteMovie(movieId) {
+    return axios.delete(MOVIE_BASE_API_URL + "/" + movieId);
   }
 }
 

@@ -21,10 +21,10 @@ const AddMovieComponent = () => {
     if (movieId) {
       MovieService.updateMovie(movieId, movie)
         .then((response) => {
-          navigate("/movies")
+          navigate("/movies");
         })
         .catch((error) => {
-          console.log(error)
+          console.log(error);
         });
     } else {
       MovieService.addMovie(movie)
@@ -33,8 +33,8 @@ const AddMovieComponent = () => {
           navigate("/movies");
         })
         .catch((error) => {
-          console.log(error)
-        })
+          console.log(error);
+        });
     }
   };
 
