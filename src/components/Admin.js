@@ -1,7 +1,11 @@
 import React from "react";
+import AddMovieComponent from "./AddMovieComponent";
 
 const Admin = () => {
-  return <div>Admin</div>;
+  return (
+    <AddMovieComponent/>
+  );
+  
 };
 
 export default Admin;
