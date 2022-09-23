@@ -11,37 +11,42 @@ export const MOVIES = [
         id: 0,
         name: 'Avenger',
         image: avenger,
-        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
-        // isMovie: true;
+        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.',
+        isMovie: true
     },
     {
         id: 1,
         name: 'Batman',
         image: batman,
-        description: 'Commodo aute eu commodo laboris sint. Laboris eiusmod voluptate nisi elit. Dolore amet non enim eiusmod labore voluptate nulla voluptate dolore officia aliqua deserunt. Commodo tempor incididunt labore non nulla.'
+        description: 'Commodo aute eu commodo laboris sint. Laboris eiusmod voluptate nisi elit. Dolore amet non enim eiusmod labore voluptate nulla voluptate dolore officia aliqua deserunt. Commodo tempor incididunt labore non nulla.',
+        isMovie: true
     },
     {
         id: 2,
         name: 'Godfather',
         image: godfather,
-        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
+        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.',
+        isMovie: true
     },
     {
         id: 3,
         name: 'Jurassic Park',
         image: jurassicpark,
-        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
+        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.',
+        isMovie: true
     },
     {
         id: 4,
         name: 'Spiderman',
         image: spiderman,
-        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
+        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.',
+        isMovie: true
     },
     {
         id: 5,
         name: 'Titanic',
         image: titanic,
-        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.'
+        description: 'Amet incididunt incididunt pariatur non eiusmod commodo non. Ex reprehenderit ut laboris proident commodo aute amet ex est ullamco enim aliqua. Irure ullamco eu elit labore officia nostrud eiusmod dolor.',
+        isMovie: true
     },
 ]
