@@ -10,6 +10,10 @@ class MovieService {
   addMovie(movie){
     return axios.post(MOVIE_BASE_API_URL, movie)
   }
+
+  getEmployeByID(movieId){
+    return axios.get(MOVIE_BASE_API_URL + '/' +movieId);
+  }
 }
 
 export default new MovieService();

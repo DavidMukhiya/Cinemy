@@ -14,14 +14,14 @@ function App() {
       <Header />
       {/* <Body />
       <MovieDirectoryPage/> */}
-        <Routes>
-          <Route path="/" element={<Body />}></Route>
-          <Route path="/movies" element={<MovieCardList/>}></Route>
-          <Route path="/tvseries" element={<Tvseries/>} ></Route>
-          <Route path="/admin" element={<Admin/>}></Route>
-        </Routes>
-        <Footer/>
-      
+      <Routes>
+        <Route path="/" element={<Body />}></Route>
+        <Route path="/movies" element={<MovieCardList />}></Route>
+        <Route path="/tvseries" element={<Tvseries />}></Route>
+        <Route path="/admin" element={<Admin />}></Route>
+        <Route path="/editMovie/:id" element={<Admin />}></Route>
+      </Routes>
+      <Footer />
     </>
   );
 }
