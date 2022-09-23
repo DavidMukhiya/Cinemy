@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+=======
+import React, { useEffect, useState } from "react";
+import { useNavigate, useParams, Link } from "react-router-dom";
+>>>>>>> Service
 import MovieService from "../services/MovieService";
 
 const AddMovieComponent = () => {
@@ -9,30 +14,63 @@ const AddMovieComponent = () => {
   const [description, setDescription] = useState("");
   const [isMovie, setIsMovie] = useState("");
   const navigate = useNavigate();
+  const { movieId } = useParams();
 
-  const saveMovie = (e) => {
+  const saveorUpdateMovie = (e) => {
     e.preventDefault();
 
     const movie = { id, name, image, description, isMovie };
 
     console.log(movie);
 
-    MovieService.addMovie(movie)
+    if (movieId) {
+      MovieService.updateMovie(movieId, movie)
+        .then((response) => {
+          navigate("/movies");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    } else {
+      MovieService.addMovie(movie)
+        .then((response) => {
+          console.log(response.data);
+          navigate("/movies");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  };
+
+  useEffect(() => {
+    MovieService.getMovieByID(movieId)
       .then((response) => {
-        console.log(response.data);
-        navigate("/movies");
+        setId(response.data.id);
+        setName(response.data.name);
+        setImage(response.data.image);
+        setDescription(response.data.description);
+        setIsMovie(response.data.isMovie);
       })
       .catch((error) => {
         console.log(error);
       });
-  };
+  }, []);
 
+  const title = () => {
+    if (movieId) {
+      return <h2 className="text-center mt-3">Update Movie</h2>;
+    } else {
+      return <h2 className="text-center mt-3">Add Movie</h2>;
+    }
+  };
   return (
     <>
       <div className="container mt-3 mb-3">
         <div className="row">
           <div className="card col-md-6 offset-md-3 offset-md-3">
-            <h2 className="text-center mt-3">Add Movie</h2>
+            {/* <h2 className="text-center mt-3">Add Movie</h2> */}
+            {title()}
             <div className="card-body">
               <form>
                 {/* ID */}
@@ -109,11 +147,17 @@ const AddMovieComponent = () => {
                 {/* IsMovie? */}
                 <button
                   className="btn btn-success"
-                  onClick={(e) => saveMovie(e)}
+                  onClick={(e) => saveorUpdateMovie(e)}
                 >
-                  Add Movie
+                  Submit
                 </button>
+<<<<<<< HEAD
                 <Link to='/' className="btn btn-danger m-2">Cancel</Link>
+=======
+                <Link to="/movies" className="btn btn-danger m-2">
+                  Cancel
+                </Link>
+>>>>>>> Service
               </form>
             </div>
           </div>
