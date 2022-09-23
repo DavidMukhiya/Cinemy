@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Row, Col, Button } from "reactstrap";
-import { MOVIES } from "../MOVIES";
 import MovieService from "../services/MovieService";
 import SimpleCard from "./SimpleCard";
 
@@ -15,7 +14,7 @@ const MovieCardList = ({ setMovieId }) => {
   const getAllMovies = () => {
     MovieService.getAllMovies()
       .then((response) => {
-        setMOVIES(response.data);
+        setMOVIES(response.data)
         console.log(response.data);
       })
       .catch((error) => {
@@ -23,18 +22,11 @@ const MovieCardList = ({ setMovieId }) => {
       });
   };
 
-  const deleteMovie = (movieId) => {
-    console.log(movieId);
-    MovieService.deleteMovie(movieId)
+  const deleteMovie = (id) => {
+    console.log(id);
+    MovieService.deleteMovie(id)
       .then((response) => {
-        MovieService.getAllMovies()
-          .then((response) => {
-            setMOVIES(response.data);
-            console.log(response.data);
-          })
-          .catch((error) => {
-            console.log(error);
-          });
+        getAllMovies();
       })
       .catch((error) => {
         console.log(error);
