@@ -7,6 +7,7 @@ import MovieCardList from "./components/MovieCardList";
 import Footer from "./components/Footer";
 import Admin from "./components/Admin";
 import Tvseries from "./components/Tvseries";
+import AddUserComponent from "./components/AddUserComponent";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/tvseries" element={<Tvseries />}></Route>
         <Route path="/admin" element={<Admin />}></Route>
         <Route path="/editMovie/:movieId" element={<Admin />}></Route>
+        <Route path="/users" element={<AddUserComponent />}></Route>
       </Routes>
       <Footer />
     </>
