@@ -38,6 +38,21 @@ const saveUser = (e) => {
 <form class="form-signin">
 
 <div class="form-label-group">
+    <label for="inputUserName">ID</label>
+    <input 
+    type="number" 
+    id="inputID" 
+    class="form-control" 
+    placeholder="ID" 
+    value = {id} 
+    onChange={(e) => setId(e.target.value)} 
+    required 
+    autofocus/>
+    
+  </div>
+
+<div class="form-label-group">
+    <label for="inputUserName">Username</label>
     <input 
     type="text" 
     id="inputUserName" 
@@ -47,10 +62,11 @@ const saveUser = (e) => {
     onChange={(e) => setName(e.target.value)} 
     required 
     autofocus/>
-    <label for="inputUserName">Username</label>
+    
   </div>
 
   <div class="form-label-group">
+    <label for="inputEmail">Email address</label>
     <input
      type="email" 
      id="inputEmail" 
@@ -59,10 +75,11 @@ const saveUser = (e) => {
      value = {email} 
      onChange={(e) => setEmail(e.target.value)} 
      required />
-    <label for="inputEmail">Email address</label>
+    
   </div>
 
   <div class="form-label-group">
+    <label for="inputPassword">Password</label>
     <input 
     type="password" 
     id="inputPassword" 
@@ -71,7 +88,7 @@ const saveUser = (e) => {
     value= {password} 
     onChange={(e) => setPassword(e.target.value)} 
     required/>
-    <label for="inputPassword">Password</label>
+    
   </div>
 
   <div class="checkbox mb-3">
@@ -79,7 +96,11 @@ const saveUser = (e) => {
       <input type="checkbox" value="remember-me"/> Remember me
     </label>
   </div>
-  <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
+    <button class="btn btn-lg btn-primary btn-block"
+        type="submit" 
+        onClick={saveUser}>
+        Sign in
+    </button>
 
 </form>
 </div>
