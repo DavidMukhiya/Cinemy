@@ -1,9 +1,10 @@
 import React from 'react'
+import TVSeriesCardList from '../components/TVSeriesCardList'
 
-const Tvseries = () => {
+const TVSeries = () => {
   return (
-    <div>Tvseries</div>
+      <TVSeriesCardList/>
   )
 }
 
-export default Tvseries
+export default TVSeries

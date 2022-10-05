@@ -95,14 +95,24 @@ const AddMovieComponent = () => {
                 {/* Description */}
 
                 {/* IsMovie? */}
-                <div className="form-group mb-2">
-                  <label className="form-label">Movie?</label>
+                <div className="form-group mb-2 check">
+                  <label htmlFor="movie" className="check">Movie</label>
+                  {' '}
                   <input
-                    type="number"
-                    placeholder="Enter 1 for Movies or else 0"
+                    id="movie"
+                    type="radio"
                     name="isMovie"
-                    className="form-control"
-                    value={isMovie}
+                    value="true"
+                    onChange={(e) => setIsMovie(e.target.value)}
+                  ></input>
+                  {' '}
+                  <label htmlFor="tvseries" className="check">TV Series</label>
+                  {' '}
+                  <input
+                    id="tvseries"
+                    type="radio"
+                    name="isMovie"
+                    value="false"
                     onChange={(e) => setIsMovie(e.target.value)}
                   ></input>
                 </div>

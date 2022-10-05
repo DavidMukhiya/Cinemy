@@ -4,7 +4,7 @@ import { Row, Col, Button } from "reactstrap";
 import MovieService from "../services/MovieService";
 import SimpleCard from "./SimpleCard";
 
-const MovieCardList = ({ setMovieId }) => {
+const Tvseries = ({ setMovieId }) => {
   const [MOVIES, setMOVIES] = useState([]);
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const MovieCardList = ({ setMovieId }) => {
   return (
     <>
       <Row>
-        {MOVIES.filter((m)=>m.movie===true).map((movie) => {
+        {MOVIES.filter((m)=>m.movie===false).map((movie) => {
           return (
             <Col
               xs="4"
@@ -64,4 +64,4 @@ const MovieCardList = ({ setMovieId }) => {
   );
 };
 
-export default MovieCardList;
+export default Tvseries;
